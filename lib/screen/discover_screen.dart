@@ -4,14 +4,14 @@ import 'package:simple_news_app/models/article_model.dart';
 import 'package:simple_news_app/models/category_model.dart';
 import 'package:simple_news_app/services/api_services.dart';
 
-class NotificationScreen extends StatefulWidget {
-  const NotificationScreen({super.key});
+class DiscoverScreen extends StatefulWidget {
+  const DiscoverScreen({super.key});
 
   @override
-  State<NotificationScreen> createState() => _NotificationScreenState();
+  State<DiscoverScreen> createState() => _DiscoverScreenState();
 }
 
-class _NotificationScreenState extends State<NotificationScreen> {
+class _DiscoverScreenState extends State<DiscoverScreen> {
   List<ApiCategory> nameCategory = [
     ApiCategory('sports'),
     ApiCategory('health'),

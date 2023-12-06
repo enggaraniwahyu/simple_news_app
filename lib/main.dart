@@ -4,7 +4,7 @@ import 'package:simple_news_app/firebase_options.dart';
 import 'package:simple_news_app/screen/login_screen.dart';
 import 'package:simple_news_app/screen/navigation.dart';
 import 'package:simple_news_app/screen/detail_screen.dart';
-import 'package:simple_news_app/screen/notification_screen.dart';
+import 'package:simple_news_app/screen/discover_screen.dart';
 import 'package:simple_news_app/screen/register_screen.dart';
 import 'package:simple_news_app/screen/spash_screen.dart';
 
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const LoginScreen(),
         '/register': (context) => const RegisterScreen(),
         '/home': (context) => const Navigation(),
-        '/notification': (context) => const NotificationScreen(),
+        '/notification': (context) => const DiscoverScreen(),
         '/detail': (context) => const DetailScreen(),
       },
       // home: const Dashboard(),

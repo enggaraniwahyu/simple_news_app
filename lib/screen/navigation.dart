@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:simple_news_app/screen/home_screen.dart';
-import 'package:simple_news_app/screen/notification_screen.dart';
+import 'package:simple_news_app/screen/discover_screen.dart';
 
 final screen = [
   const HomeScreen(),
-  const NotificationScreen(),
+  const DiscoverScreen(),
 ];
 
 class Navigation extends StatefulWidget {

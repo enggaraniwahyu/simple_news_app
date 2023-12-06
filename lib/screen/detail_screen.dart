@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:simple_news_app/models/article_model.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -59,9 +60,14 @@ class DetailScreen extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              const Icon(
-                Icons.share,
-                color: Colors.white,
+              IconButton(
+                icon: const Icon(
+                  Icons.share,
+                  color: Colors.white,
+                ),
+                onPressed: () async {
+                  await Share.share(article.url ?? "no url");
+                },
               ),
             ],
           ),
@@ -156,38 +162,9 @@ class DetailScreen extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          const Text(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod in pellentesque massa placerat duis ultricies. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Elit eget gravida cum sociis. Integer feugiat scelerisque varius morbi enim nunc faucibus. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Lacinia quis vel eros donec ac odio tempor. Morbi non arcu risus quis varius quam quisque. Ut ornare lectus sit amet est placerat in egestas erat.",
-            style: TextStyle(
-              height: 1.3,
-            ),
-          ),
-          const SizedBox(
-            height: 16,
-          ),
-          Container(
-            height: 160,
-            width: double.maxFinite,
-            clipBehavior: Clip.hardEdge,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
-            child: Image.asset(
-              'assets/images/map.jpg',
-              fit: BoxFit.cover,
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const Text(
-            "Doctor Reinhart explains the new variant of coronavirus",
-            style: TextStyle(fontSize: 12),
-          ),
-          const SizedBox(
-            height: 16,
-          ),
-          const Text(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod in pellentesque massa placerat duis ultricies. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Elit eget gravida cum sociis. Integer feugiat scelerisque varius morbi enim nunc faucibus. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Lacinia quis vel eros donec ac odio tempor. Morbi non arcu risus quis varius quam quisque. Ut ornare lectus sit amet est placerat in egestas erat.",
-            style: TextStyle(
+          Text(
+            article.description ?? "Tidak Ada Deskripsi",
+            style: const TextStyle(
               height: 1.3,
             ),
           ),
